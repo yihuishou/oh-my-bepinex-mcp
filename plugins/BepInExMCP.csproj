@@ -8,6 +8,8 @@
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
+    <!-- netstandard2.0 defaults CopyLocalLockFileAssemblies=false; the game is not a NuGet consumer, so copy all runtime deps into the output for self-contained deployment. -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <!-- Keep sibling tools / IL2CPP project out of this SDK glob (their obj/**/*.cs caused CS0579). -->
     <DefaultItemExcludes>$(DefaultItemExcludes);BepInExMCP.IL2CPP/**;tools/**;CreateBepInExProject/**</DefaultItemExcludes>
     <RestoreAdditionalProjectSources>
