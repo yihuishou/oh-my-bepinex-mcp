@@ -104,12 +104,12 @@ public partial class McpServerMod : BaseUnityPlugin
     private async Task StartHttpServer(CancellationToken token)
     {
         HttpListener listener = new HttpListener();
-        listener.Prefixes.Add($"http://{ConfigListenIP.Value}:8080/mcp/");
+        listener.Prefixes.Add($"http://{ConfigListenIP.Value}:8141/mcp/");
 
         try
         {
             listener.Start();
-            Logger.LogInfo($"Listening for MCP requests on http://{ConfigListenIP.Value}:8080/mcp/");
+            Logger.LogInfo($"Listening for MCP requests on http://{ConfigListenIP.Value}:8141/mcp/");
 
             while (listener.IsListening)
             {

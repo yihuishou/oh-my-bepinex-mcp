@@ -41,7 +41,7 @@ dotnet build .\BepInExMCP.IL2CPP\BepInExMCP.IL2CPP.csproj -c Release `
 
 ## After install
 
-Start the game with the plugin loaded, then the MCP server from the repo root docs (`mcp/ModdersHelperApp.py`). Bridge default: `http://localhost:8080/mcp`.
+Start the game with the plugin loaded, then the MCP server from the repo root docs (`mcp/ModdersHelperApp.py`). Bridge default: `http://localhost:8141/mcp`.
 
 ## IL2CPP-only notes
 

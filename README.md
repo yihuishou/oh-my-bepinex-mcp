@@ -126,7 +126,11 @@ pip install -r requirements.txt
 python ModdersHelperApp.py --transport=stdio --headless
 ```
 
-Without `--headless`, a small Tk GUI can host sliders/buttons. Bridge default: `http://localhost:8080/mcp` (see `--help` for flags).
+Without `--headless`, a small Tk GUI can host sliders/buttons. Bridge default: `http://localhost:8141/mcp` (see `--help` for flags).
+
+> **Port note:** the bridge default port is **8141** (was 8080) to avoid conflicts with common local services.
+> Override per side: the Python server reads the `UNITY_MCP_GAME_PORT` environment variable; the IL2CPP plugin reads `Network/ListenPort` from its BepInEx `.cfg`.
+> **Existing installs:** BepInEx only writes a config default when the key is missing, so a game that already saved `ListenPort=8080` will keep listening on 8080. Either edit that `.cfg` to `8141`, or launch the MCP server with `UNITY_MCP_GAME_PORT=8080` to keep the old port.
 
 ### 3. Wire an MCP client
 

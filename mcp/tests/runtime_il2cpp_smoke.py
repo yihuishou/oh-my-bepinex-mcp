@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import ModdersHelperApp as app
 from profiles import ProfileStore
 
-BASE_URL = "http://localhost:8080/mcp"
+BASE_URL = "http://localhost:8141/mcp"
 
 
 def get(endpoint: str, params: dict | None = None) -> dict | list:

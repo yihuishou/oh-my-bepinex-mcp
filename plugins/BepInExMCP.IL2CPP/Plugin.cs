@@ -34,7 +34,7 @@ public sealed class Plugin : BasePlugin
         var listenPort = Config.Bind(
             "Network",
             "ListenPort",
-            8080,
+            8141,
             "HTTP listen port for MCP bridge commands.");
         var webhookAddress = Config.Bind(
             "Network",

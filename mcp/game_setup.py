@@ -252,7 +252,7 @@ def setup_game(game_directory: str) -> str:
         return f"Deploy failed: {e}"
 
     status.append(f"Done: {game_dir}")
-    status.append("Launch the game — bridge should listen on http://localhost:8080/mcp/")
+    status.append("Launch the game — bridge should listen on http://localhost:8141/mcp/")
     return "\n".join(status)
 
 
