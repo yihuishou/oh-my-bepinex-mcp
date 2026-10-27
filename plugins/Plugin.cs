@@ -227,6 +227,7 @@ public partial class McpServerMod : BaseUnityPlugin
                             }
                             catch (Exception ex)
                             {
+                                Logger.LogWarning($"Failed to resolve game directory from dataPath: {ex.Message}. Falling back to Application.dataPath.");
                                 gameDirectory = Application.dataPath;
                             }
                             
